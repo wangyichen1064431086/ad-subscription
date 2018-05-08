@@ -36,7 +36,7 @@ function render(template, context) {
 
 gulp.task('html',async function() {
   const destDir = '.tmp';
-  const dataForRender = await fs.readAsync('data/demo.json','json');//await 可以获取promise中resolve的值
+  const dataForRender = await fs.readAsync('data/ad.json','json');//await 可以获取promise中resolve的值
   const renderResult = await render('index.html',dataForRender);
   await fs.writeAsync(`${destDir}/index.html`,renderResult);
   browserSync.reload('*.html');
