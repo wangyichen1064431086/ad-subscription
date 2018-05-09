@@ -1,4 +1,4 @@
-const mode = "dev";
+const mode = "prod";
 
 if(mode === "prod") {
   console.log("prod");
