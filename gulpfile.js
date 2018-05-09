@@ -11,7 +11,7 @@ const rollupUglify = require('rollup-plugin-uglify');
 const minifyEs6 = require('uglify-es').minify;
 const merge = require('merge-stream');
 var cache;
-const finalName = "pushdownVideo";
+const finalName = "adSubscription";
 const env = new nunjucks.Environment(
   new nunjucks.FileSystemLoader(['views'],{
     watch:false,//MARK:如果为true，则会导致html任务挂在那儿
@@ -139,10 +139,16 @@ gulp.task('build', gulp.series('del','html','style','script',() => {
 
 gulp.task('publish', gulp.series('build',()=>{
   const managementDir = '../ad-management/complex_pages';
-  const onlineDir = '../dev_www/frontend/tpl/marketing/complex_pages'
+  const onlineDir = '../dev_www/frontend/tpl/marketing';
   const managementStream = gulp.src(`dist/${finalName}.html`)
     .pipe(gulp.dest(managementDir));
   const onlineStream = gulp.src(`dist/${finalName}.html`)
     .pipe(gulp.dest(onlineDir));
   return merge(managementStream,onlineStream);
+}));
+
+gulp.task('test', gulp.series('build', () => {
+  const testDir = '../NEXT/app/m/marketing';
+  return gulp.src(`dist/${finalName}.html`)
+    .pipe(gulp.dest(testDir));
 }));
