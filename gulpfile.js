@@ -11,7 +11,7 @@ const rollupUglify = require('rollup-plugin-uglify');
 const minifyEs6 = require('uglify-es').minify;
 const merge = require('merge-stream');
 var cache;
-const finalName = "adSubscription";
+const finalName = "adSubscription300x600";
 const env = new nunjucks.Environment(
   new nunjucks.FileSystemLoader(['views'],{
     watch:false,//MARK:如果为true，则会导致html任务挂在那儿
