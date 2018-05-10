@@ -1,9 +1,15 @@
+$darkBlue: #14609f;
+$mediumBlue: #76a8d1;
+$lightBlue: #cee7fc;
+$bgWhite:#edf5f9;
+$textWhite: #fff;
+$textGray:#333;
+$textBlack:#000;
 html,body {
   margin:0;
   padding:0;
   margin: 0;
   padding: 0;
- 
 }
 /**
 深蓝 #14609f
@@ -13,31 +19,152 @@ html,body {
 body {
   box-sizing: border-box;
   margin: 0 auto;
-  background-color: #edf5f9;
   padding: 0 10px;
-  border: 1px solid red;
+  border: 1px solid black;
+  background-color: $bgWhite;
   width: 300px;
   height: 600px;
   font-family: Helvetica Neue,Verdana,Arial,Hiragino Sans GB,WenQuanYi Micro Hei,Heiti SC,STHeiti,Microsoft Yahei,SimSun,sans-serif;
   font-size: 16px;
+  color:$textGray;
+}
+p{
+  margin:0;
 }
 .top-line {
   margin-top: 6px;
   width: 100%;
   height: 5px;
-  background-color: #0b5ea2; 
-}
-.top-title {
-  margin: 5px 0 18px;
+  font-size: 0; //一定要注意设置这个，否则高度至少为font-size的高度
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 100px;
+    height: 100%;
+    background-color: $darkBlue; 
+  }
+  &::after {
+    content: "";
+    display: inline-block;
+    width: calc(100% - 100px);
+    height: 100%;
+    background-color: $lightBlue;
+  }
   
 }
+.top-title {
+  margin: 5px 0 15px;
+  
+}
+
 .head-article {
   width: 100%;
   height: 157.5px; 
-  
+  position: relative;
+  margin-bottom: 12px;
   img {
     display: block;
     width: 100%;
     height: 100%;
+  }
+  p {
+    position: absolute;
+    box-sizing: border-box;
+    width:200px;
+    height: 60px;
+    line-height: 26px;
+    margin: 0;
+    padding: 8px 8px 0px;
+    left:0;
+    bottom:0;
+    background: $bgWhite;
+    color:$textGray;
+  }
+}
+
+.article-list {
+  height: 290px;
+  .article {
+    box-sizing: border-box;
+    height: 85px;
+    margin-bottom: 10px;
+    padding: 15px 10px;
+    background-color: $darkBlue;
+    .tag {
+      font-size: 14px;
+      display: inline-block;
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
+    }
+    .title {
+      margin-top: 10px;
+      a {
+        text-decoration: none;
+      }
+    }
+    &:nth-child(1) {
+      background-color: $darkBlue;
+      color: $textWhite;
+      .tag {
+        border-bottom-color: $textWhite;
+      }
+      a {
+        color:$textWhite;
+      }
+    }
+    &:nth-child(2) {
+      background-color: $mediumBlue;
+      color: $textWhite;
+      .tag {
+        border-bottom-color: $textWhite;
+       
+      }
+      a {
+        color:$textWhite;
+      }
+    }
+    &:nth-child(3) {
+      background-color: $lightBlue;
+      color: $textGray;
+      .tag {
+        color: $darkBlue;
+        border-bottom-color: $darkBlue;
+      }
+      a {
+        color:$textGray;
+      }
+    }
+  }
+  
+}
+
+.payinfo {
+  p {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  div {
+    text-align: center;
+    a {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 14px;
+      background-color: $darkBlue;
+      width: 190px;
+      height: 30px;
+      line-height: 30px;
+      color: $bgWhite;
+      &::after {
+        content: "";
+        display: inline-block;
+        width:5px;
+        height: 10px;
+        box-sizing: border-box;
+        border-width: 5px;
+        border-style: solid;
+        border-color: $darkBlue;
+        border-left-color: $bgWhite;
+      }
+    }
   }
 }
