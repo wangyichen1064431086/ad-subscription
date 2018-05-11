@@ -1,6 +1,7 @@
 const nunjucks = require('nunjucks');
 const gulp = require('gulp');
 const fs = require('fs-jetpack');
+const path = require('path');
 const browserSync = require('browser-sync').create();
 const $ = require('gulp-load-plugins')();
 const rollup = require('rollup').rollup;
@@ -11,7 +12,7 @@ const rollupUglify = require('rollup-plugin-uglify');
 const minifyEs6 = require('uglify-es').minify;
 const merge = require('merge-stream');
 var cache;
-const finalName = "adSubscription300x600";
+const finalName = "adForRadio300x600";
 const env = new nunjucks.Environment(
   new nunjucks.FileSystemLoader(['views'],{
     watch:false,//MARK:如果为true，则会导致html任务挂在那儿
@@ -34,14 +35,58 @@ function render(template, context) {
   });
 }
 
-gulp.task('html',async function() {
+gulp.task('html', async () => {
   const destDir = '.tmp';
-  const dataForRender = await fs.readAsync('data/ad.json','json');//await 可以获取promise中resolve的值
-  const renderResult = await render('index.html',dataForRender);
-  await fs.writeAsync(`${destDir}/index.html`,renderResult);
-  browserSync.reload('*.html');
+  const dataFileArr = fs.find('data', {
+    matching:'*.json',
+    files:true,
+    directories:false,
+    recursive:false
+  });
+  const pageNameArr = dataFileArr.map(item => {
+    return path.basename(item, '.json');
+  })
+  const renderOnePage = function(name) {
+    return new Promise(
+      async function(resolve, reject) {
+        const destDir = '.tmp';
+        const dataForRender = await fs.readAsync(`data/${name}.json`, 'json');
+        console.log(dataForRender);
+        const templateForRender = `${name}.html`;
+        const resultForRender = await render(templateForRender, dataForRender);
+        const destFileForRender = path.resolve(destDir, templateForRender);
+        const resolveInfo = {
+          resultForRender,
+          destFileForRender
+        };
+        resolve(resolveInfo);
+      }
+    ).then(resolve => {
+      fs.writeAsync(resolve.destFileForRender, resolve.resultForRender)
+    }).catch(error => {
+      console.log(error);
+    });
+  };
+  // renderOnePage函数也可以不用promise,直接用async await读、渲染、写
+
+  return Promise.all(pageNameArr.map(item => {
+    return renderOnePage(item);
+  })).then(() => {
+    browserSync.reload('*.html')
+  }).catch(error => {
+    console.log(error);
+  })
 });
 
+/*
+gulp.task('html',async function() {
+  const destDir = '.tmp';
+  const dataForRender = await fs.readAsync('data/adForRadio.json','json');//await 可以获取promise中resolve的值
+  const renderResult = await render('adForNews.html',dataForRender);
+  await fs.writeAsync(`${destDir}/adForRadio.html`,renderResult);
+  browserSync.reload('*.html');
+});
+*/
 
 gulp.task('script',() => {
   // TODO:关于rollup需要再认真学习一下
@@ -74,7 +119,7 @@ gulp.task('script',() => {
 
 gulp.task('style',() => {
   const destDir = '.tmp/styles';
-  return gulp.src('client/styles/main.scss')
+  return gulp.src('client/styles/*.scss')
     .pipe($.changed(destDir))
     .pipe($.plumber())
     .pipe($.sourcemaps.init({loadMaps:true}))
@@ -92,14 +137,16 @@ gulp.task('serve',gulp.parallel('html','style','script',function() {
   browserSync.init({
     server:{
       baseDir: ['.tmp', 'data'],
-      //directory:true,
+      directory:true,
+      /*
       routes: {
         '/static':'staic',
         '/bower_components':'bower_components',
         '/node_modules':'node_modules'
       }
+      */
     },
-    port:8080//一定要和“创建凭据”的“已获授权的 JavaScript 来源”设置的端口一致
+    port:8080
   });
   gulp.watch('client/styles/**/*.scss',gulp.parallel('style'));
   gulp.watch('client/js/**/*.js',gulp.parallel('script'));
@@ -107,7 +154,7 @@ gulp.task('serve',gulp.parallel('html','style','script',function() {
 }));
 
 gulp.task('del', (done) => {
- del(['.tmp','dist','deploy']).then( paths => {
+ del(['.tmp','dist']).then( paths => {
     console.log('Deleted files:\n',paths.join('\n'));
     done();
   });

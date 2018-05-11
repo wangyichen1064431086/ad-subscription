@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>{{ adTitle }}</title>
     <!-- smoosh -->
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/{{styleName}}.css">
     <!-- endsmoosh -->
   </head>
   <body>
     {% block content %}
     {% endblock %}
+    {# 
+    <!--暂时不用js替换功能-->
     <!-- smoosh -->
     <script src="scripts/main.js"></script>
     <!-- endsmoosh -->
+    #}
   </body>
