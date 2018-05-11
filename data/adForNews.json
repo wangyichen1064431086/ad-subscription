@@ -1,4 +1,28 @@
 {
   "adTitle":"adForNews",
-  "styleName":"adForNews"
+  "styleName":"adForNews",
+
+  "topTitle":"付费热门文章",
+  "headArticle": {
+    "title":"中国：癌症治疗领域的黑马",
+    "url":"http://www.ftchinese.com/story/001077339?archive",
+    "pic": "http://i.ftimg.net/picture/3/000077283_piclink.jpg"
+  },
+  "articleList": [
+    {
+      "tag":"全球市场",
+      "title":"注意中国对跨境资本流动的影响",
+      "url":"http://www.ftchinese.com/story/001077251?archive"
+    },
+    {
+      "tag":"华尔街",
+      "title":"“股权领口”：高风险的摇钱树",
+      "url":"http://www.ftchinese.com/story/001077238?archive"
+    },
+    {
+      "tag":"中美贸易战",
+      "title":"FT大视野：中美贸易战之大豆战",
+      "url":"http://www.ftchinese.com/story/001077056?archive"
+    }
+  ]
 }

@@ -12,7 +12,6 @@ const rollupUglify = require('rollup-plugin-uglify');
 const minifyEs6 = require('uglify-es').minify;
 const merge = require('merge-stream');
 var cache;
-const finalName = "adForRadio300x600";
 const env = new nunjucks.Environment(
   new nunjucks.FileSystemLoader(['views'],{
     watch:false,//MARK:如果为true，则会导致html任务挂在那儿
@@ -51,7 +50,6 @@ gulp.task('html', async () => {
       async function(resolve, reject) {
         const destDir = '.tmp';
         const dataForRender = await fs.readAsync(`data/${name}.json`, 'json');
-        console.log(dataForRender);
         const templateForRender = `${name}.html`;
         const resultForRender = await render(templateForRender, dataForRender);
         const destFileForRender = path.resolve(destDir, templateForRender);
@@ -178,7 +176,7 @@ gulp.task('build', gulp.series('del','html','style','script',() => {
 			showFiles:true,
 			showTotal:true
     }))
-    .pipe($.rename(`${finalName}.html`))
+    //.pipe($.rename(`${finalName}.html`))
 		.pipe(gulp.dest(destDir));
 }));
 
@@ -187,15 +185,15 @@ gulp.task('build', gulp.series('del','html','style','script',() => {
 gulp.task('publish', gulp.series('build',()=>{
   const managementDir = '../ad-management/complex_pages';
   const onlineDir = '../dev_www/frontend/tpl/marketing';
-  const managementStream = gulp.src(`dist/${finalName}.html`)
+  const managementStream = gulp.src(`dist/*.html`)
     .pipe(gulp.dest(managementDir));
-  const onlineStream = gulp.src(`dist/${finalName}.html`)
+  const onlineStream = gulp.src(`dist/*.html`)
     .pipe(gulp.dest(onlineDir));
   return merge(managementStream,onlineStream);
 }));
 
 gulp.task('test', gulp.series('build', () => {
   const testDir = '../NEXT/app/m/marketing';
-  return gulp.src(`dist/${finalName}.html`)
+  return gulp.src(`dist/*.html`)
     .pipe(gulp.dest(testDir));
 }));

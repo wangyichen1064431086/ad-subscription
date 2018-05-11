@@ -4,39 +4,27 @@
   <div class="top-line">
   </div>
 
-  <p class="top-title">资讯</p>
+  <p class="top-title">{{topTitle}}</p>
 
   <div class="head-article">
-    <a href="http://www.ftchinese.com/story/001076821?archive" target="_blank">
-      <img src="http://i.ftimg.net/picture/2/000073572_piclink.jpg" >
+    <a href="{{headArticle.url}}" target="_blank">
+      <img src="{{headArticle.pic}}" >
       <p>
-        中国挑战美国人工智能主导地位
+        {{headArticle.title}}
       </p>
     </a>
   </div>
 
   <div class="article-list">
-    <div class="article">
-      <p class="tag">中国</p>
-      <p class="title">
-        <a href="http://www.ftchinese.com/story/001077463" target="_blank">中国：癌症治疗领域的黑马黑黑哈哈哈哈哈哈</a> 
-      </p>
-    </div>
 
+    {% for article in articleList %}
     <div class="article">
-      <p class="tag">中国</p>
+      <p class="tag">{{article.tag}}</p>
       <p class="title">
-        <a href="http://www.ftchinese.com/story/001077463" target="_blank">韩国总统称可能举行韩朝美三方峰会</a> 
+        <a href="{{article.url}}" target="_blank">{{article.title}}</a> 
       </p>
     </div>
-
-    <div class="article">
-      <p class="tag">中国</p>
-      <p class="title">
-        <a  href="http://www.ftchinese.com/story/001077463" target="_blank">特朗普与习近平通话 一致同意维持对朝制裁
-        </a> 
-      </p>
-    </div>
+    {% endfor %}
   </div>
 
   <div class="payinfo">

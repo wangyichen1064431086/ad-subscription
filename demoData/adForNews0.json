@@ -1,0 +1,28 @@
+{
+  "adTitle":"adForNews",
+  "styleName":"adForNews",
+
+  "topTitle":"资讯",
+  "headArticle": {
+    "title":"中国挑战美国人工智能主导地位",
+    "url":"http://www.ftchinese.com/story/001076821?archive",
+    "pic": "http://i.ftimg.net/picture/2/000073572_piclink.jpg"
+  },
+  "articleList": [
+    {
+      "tag":"中国",
+      "title":"中国：癌症治疗领域的黑马黑黑哈哈哈哈哈哈",
+      "url":"http://www.ftchinese.com/story/001077463"
+    },
+    {
+      "tag":"韩国",
+      "title":"韩国总统称可能举行韩朝美三方峰会",
+      "url":"http://www.ftchinese.com/story/001077463"
+    },
+    {
+      "tag":"朝鲜",
+      "title":"特朗普与习近平通话 一致同意维持对朝制裁",
+      "url":"http://www.ftchinese.com/story/001077463"
+    }
+  ]
+}
