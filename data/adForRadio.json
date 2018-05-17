@@ -3,25 +3,25 @@
   "styleName":"adForRadio",
 
 
-  "topTitle":"英语电台",
+  "topTitle":"英语电台 &lt; 付费精选",
   "headArticle": {
-    "tag":"单曲鉴赏",
-    "title":"The Life of a Song：To Love Somebody",
-    "url":"http://www.ftchinese.com/interactive/11771?adchannelID=1100&exclusive#adchannelID=1100",
-    "pic":"http://i.ftimg.net/picture/9/000077559_piclink.jpg"
+    "tag":"社会科技",
+    "title":"Let knowledge spread around the world",
+    "url":"http://www.ftchinese.com/interactive/11721?adchannelID=1100&exclusive#adchannelID=1100",
+    "pic":"http://i.ftimg.net/picture/1/000077291_piclink.jpg"
   },
   "articleList": [
     {
-      "tag":"单曲鉴赏",
-      "title":"The Life of a Song：To Love Somebody",
-      "url":"http://www.ftchinese.com/interactive/11771?adchannelID=1100&exclusive#adchannelID=1100",
-      "pic":"http://i.ftimg.net/picture/9/000077559_piclink.jpg"
+      "tag":"FT Money Show",
+      "title":"Pensions for the self-employed, solar powered properties and financial planning",
+      "url":"http://www.ftchinese.com/interactive/11598?adchannelID=1100&exclusive#adchannelID=1100",
+      "pic":"http://i.ftimg.net/picture/4/000076974_piclink.jpg"
     },
     {
-      "tag":"原生视频",
-      "title":"夏威夷火山喷发画面：1200度高温熔岩流向居民区",
-      "url":"http://www.ftchinese.com/video/2702?adchannelID=1100",
-      "pic":"http://i.ftimg.net/picture/9/000077559_piclink.jpg"
+      "tag":"中美贸易战",
+      "title":"China hits back at US with retaliatory tariffs",
+      "url":"http://www.ftchinese.com/interactive/11545?adchannelID=1100&exclusive#adchannelID=1100",
+      "pic":"http://i.ftimg.net/picture/9/000076809_piclink.jpg"
     },
     {
       "tag":"单曲鉴赏",

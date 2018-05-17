@@ -1,0 +1,34 @@
+{
+  "adTitle":"adForRadio",
+  "styleName":"adForRadio",
+
+
+  "topTitle":"英语电台",
+  "headArticle": {
+    "tag":"单曲鉴赏",
+    "title":"The Life of a Song：To Love Somebody",
+    "url":"http://www.ftchinese.com/interactive/11771?adchannelID=1100&exclusive#adchannelID=1100",
+    "pic":"http://i.ftimg.net/picture/9/000077559_piclink.jpg"
+  },
+  "articleList": [
+    {
+      "tag":"单曲鉴赏",
+      "title":"The Life of a Song：To Love Somebody",
+      "url":"http://www.ftchinese.com/interactive/11771?adchannelID=1100&exclusive#adchannelID=1100",
+      "pic":"http://i.ftimg.net/picture/9/000077559_piclink.jpg"
+    },
+    {
+      "tag":"原生视频",
+      "title":"夏威夷火山喷发画面：1200度高温熔岩流向居民区",
+      "url":"http://www.ftchinese.com/video/2702?adchannelID=1100",
+      "pic":"http://i.ftimg.net/picture/9/000077559_piclink.jpg"
+    },
+    {
+      "tag":"单曲鉴赏",
+      "title":"The Life of a Song：To Love Somebody",
+      "url":"http://www.ftchinese.com/interactive/11771?adchannelID=1100&exclusive#adchannelID=1100",
+      "pic":"http://i.ftimg.net/picture/9/000077559_piclink.jpg"
+    }
+  ]
+  
+}
