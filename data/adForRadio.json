@@ -3,19 +3,19 @@
   "styleName":"adForRadio",
 
 
-  "topTitle":"英语电台 &lt; 付费精选",
+  "topTitle":"英语电台",
   "headArticle": {
     "tag":"社会科技",
     "title":"Let knowledge spread around the world",
     "url":"http://www.ftchinese.com/interactive/11721?adchannelID=1100&exclusive#adchannelID=1100",
-    "pic":"http://i.ftimg.net/picture/1/000077291_piclink.jpg"
+    "pic":"http://i.ftimg.net/picture/7/000077717_piclink.jpg"
   },
   "articleList": [
     {
-      "tag":"FT Money Show",
-      "title":"Pensions for the self-employed, solar powered properties and financial planning",
-      "url":"http://www.ftchinese.com/interactive/11598?adchannelID=1100&exclusive#adchannelID=1100",
-      "pic":"http://i.ftimg.net/picture/4/000076974_piclink.jpg"
+      "tag":"新零售",
+      "title":"How beauty is beating the rest of retail",
+      "url":"http://www.ftchinese.com/interactive/11804?adchannelID=1100&exclusive#adchannelID=1100",
+      "pic":"http://i.ftimg.net/picture/2/000077702_piclink.jpg"
     },
     {
       "tag":"中美贸易战",

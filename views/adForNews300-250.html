@@ -13,27 +13,22 @@
         <a href="{{headArticle.url}}" target="_blank">{{headArticle.title}}</a> 
       </p>
     </div>
-    <img class="circle-img" src="{{headArticle.pic}}" >
-  
+    <img src="{{headArticle.pic}}" >
   </div>
 
-
   <div class="article-list">
+
     {% for article in articleList %}
     <div class="article">
-      <img class="circle-img-item" src="{{article.pic}}">
-      <div class="context">
-        <p class="tag">{{article.tag}}</p>
-        <p class="title">
-          <a href="{{article.url}}" target="_blank">{{article.title}}</a> 
-        </p>
-      </div>
+      <p class="tag">{{article.tag}}</p>
+      <p class="title">
+        <a href="{{article.url}}" target="_blank">{{article.title}}</a> 
+      </p>
     </div>
     {% endfor %}
   </div>
 
   <div class="payinfo">
-    <p>FT中文网付费会员，专享资讯</p>
     <div><a href="http://www.ftacademy.cn/subscription.html" target="_blank">仅198元/年，即刻订阅&nbsp;&nbsp;&nbsp;</a></div>
   </div>
 {% endblock %}
