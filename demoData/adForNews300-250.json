@@ -1,0 +1,19 @@
+{
+  "adTitle":"adForNews300-250",
+  "styleName":"adForNews300-250",
+
+  "topTitle":"精选咨询，付费会员专享 &gt; ",
+  "headArticle": {
+    "tag":"中国",
+    "title":"中国挑战美国人工智能主导地位美国人工智能主导地位",
+    "url":"http://www.ftchinese.com/interactive/11721?adchannelID=1100&exclusive#adchannelID=1100",
+    "pic":"http://i.ftimg.net/picture/8/000077558_piclink.jpg"
+  },
+  "articleList": [
+    {
+      "tag":"中美关系",
+      "title":"FT社评：特朗普向中国提出非理性贸易要求",
+      "url":"http://www.ftchinese.com/story/001077251?archive"
+    }
+  ]
+}

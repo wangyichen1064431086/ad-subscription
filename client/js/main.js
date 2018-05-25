@@ -82,7 +82,7 @@ if (window.parent && window.parent.parent && window.parent.parent.ga) {
     ga('send', 'event', category, action, labelForSubBtn);
   }
 
-  const articleLists = Array.from(document.querySelectorAll('.article-list .article'));
+  const articleLists = Array.from(document.querySelectorAll('.article-list .article a'));
   articleLists.forEach((elem, index) => {
     (function() {
        elem.addEventListener('click', function(){
