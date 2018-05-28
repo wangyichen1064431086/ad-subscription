@@ -63,7 +63,7 @@ function dynamicGetHTMLData() {
 }
 */
 if (window.parent && window.parent.parent && window.parent.parent.ga) {
-  console.log('track ga for ad subscription');
+  //console.log('track ga for ad subscription');
   const ga = window.parent.parent.ga;
   const adTitle = document.getElementsByTagName('title')[0].innerHTML;
   const category = `Subscription HouseAd: ${adTitle}`;
@@ -71,7 +71,7 @@ if (window.parent && window.parent.parent && window.parent.parent.ga) {
 
   const headArticle = document.querySelector('.head-article a');
   const labelForHeadArticle = 'Head Article';
-  console.log(headArticle);
+  //console.log(headArticle);
   headArticle.onclick = function() {
     ga('send', 'event', category, action, labelForHeadArticle);
   }
