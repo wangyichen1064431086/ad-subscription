@@ -22,6 +22,15 @@ const env = new nunjucks.Environment(
   }
 );
 
+env.addFilter('addSearchParam', (str, param) => {
+  const hashIndex = str.indexOf('#');
+  const hashStr = hashIndex > 0 ? str.substr(hashIndex) : '';
+  const strWithOutHashStr = hashIndex > 0 ? str.substring(0, hashIndex) : str;
+  if (strWithOutHashStr.includes('?')) {
+    return `${strWithOutHashStr}&${param}${hashStr}`;
+  } 
+  return `${strWithOutHashStr}?${param}${hashStr}`;
+});
 function render(template, context) {
   return new Promise(function(resolve, reject) {
       env.render(template,context,function(err,res) {
@@ -185,11 +194,14 @@ gulp.task('build', gulp.series('del','html','style','script',() => {
 gulp.task('publish', gulp.series('build',()=>{
   const managementDir = '../ad-management/complex_pages';
   const onlineDir = '../dev_www/frontend/tpl/marketing';
+  const onlineTestDir = '../testing/dev_www/frontend/tpl/marketing';
   const managementStream = gulp.src(`dist/*.html`)
     .pipe(gulp.dest(managementDir));
   const onlineStream = gulp.src(`dist/*.html`)
     .pipe(gulp.dest(onlineDir));
-  return merge(managementStream,onlineStream);
+  const onlineTestStream = gulp.src(`dist/*.html`)
+  .pipe(gulp.dest(onlineTestDir));
+  return merge(managementStream,onlineStream,onlineTestStream);
 }));
 
 gulp.task('test', gulp.series('build', () => {

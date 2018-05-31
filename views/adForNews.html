@@ -7,7 +7,7 @@
   <p class="top-title">{{topTitle}}</p>
 
   <div class="head-article">
-    <a href="{{headArticle.url}}" target="_blank">
+    <a href="{{headArticle.url|addSearchParam('ccode='+ccode)}}" target="_blank">
       <img src="{{headArticle.pic}}" >
       <p>
         {{headArticle.title}}
@@ -21,7 +21,7 @@
     <div class="article">
       <p class="tag">{{article.tag}}</p>
       <p class="title">
-        <a href="{{article.url}}" target="_blank">{{article.title}}</a> 
+        <a href="{{article.url|addSearchParam('ccode='+ccode)}}" target="_blank">{{article.title}}</a> 
       </p>
     </div>
     {% endfor %}
@@ -29,7 +29,7 @@
 
   <div class="payinfo">
     <p>FT中文网付费会员，专享资讯</p>
-    <div><a href="http://www.ftacademy.cn/subscription.html" target="_blank">仅198元/年，即刻订阅&nbsp;&nbsp;&nbsp;</a></div>
+    <div><a href="{{ 'http://www.ftacademy.cn/subscription.html'|addSearchParam('ccode='+ccode) }}" target="_blank">仅198元/年，即刻订阅&nbsp;&nbsp;&nbsp;</a></div>
   </div>
 {% endblock %}
 
