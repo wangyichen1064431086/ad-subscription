@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+  {% set searchParam = 'ccode='+ccode+'&type=video'%}
   <div class="top-line">
   </div>
 
@@ -10,7 +11,7 @@
     <div class="rect-bg">
       <p class="tag">{{headArticle.tag}}</p>
       <p class="title">
-        <a href="{{headArticle.url|addSearchParam('ccode='+ccode)}}" target="_blank">{{headArticle.title}}</a> 
+        <a href="{{headArticle.url|addSearchParam(searchParam)}}" target="_blank">{{headArticle.title}}</a> 
       </p>
     </div>
     <img class="circle-img" src="{{headArticle.pic}}" >
@@ -25,7 +26,7 @@
       <div class="context">
         <p class="tag">{{article.tag}}</p>
         <p class="title">
-          <a href="{{article.url|addSearchParam('ccode='+ccode)}}" target="_blank">{{article.title}}</a> 
+          <a href="{{article.url|addSearchParam(searchParam)}}" target="_blank">{{article.title}}</a> 
         </p>
       </div>
     </div>
@@ -34,7 +35,8 @@
 
   <div class="payinfo">
     <p>FT中文网付费会员，专享资讯</p>
-    <div><a href="{{ 'http://www.ftacademy.cn/subscription.html'|addSearchParam('ccode='+ccode) }}" target="_blank">仅198元/年，即刻订阅&nbsp;&nbsp;&nbsp;</a></div>
+    {% set searchParam = 'ccode='+ccode%}
+    <div><a href="{{ 'http://www.ftacademy.cn/subscription.html'|addSearchParam(searchParam) }}" target="_blank">仅198元/年，即刻订阅&nbsp;&nbsp;&nbsp;</a></div>
   </div>
 {% endblock %}
 
