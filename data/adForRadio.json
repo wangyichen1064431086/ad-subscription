@@ -2,31 +2,31 @@
   "adTitle":"adForRadio",
   "styleName":"adForRadio",
 
-  "ccode":"2G180001",
+  "ccode":"2G186013",
   "topTitle":"英语电台",
   "headArticle": {
-    "tag":"社会科技",
-    "title":"Let knowledge spread around the world",
-    "url":"http://www.ftchinese.com/interactive/11721?adchannelID=1100&exclusive#adchannelID=1100",
-    "pic":"http://i.ftimg.net/picture/7/000077717_piclink.jpg"
+    "tag":"时尚",
+    "title":"The dark side of fast fashion",
+    "url":"http://www.ftchinese.com/interactive/12026?adchannelID=5000&exclusive#adchannelID=1100",
+    "pic":"http://i.ftimg.net/picture/3/000078213_piclink.jpg"
   },
   "articleList": [
     {
-      "tag":"新零售",
-      "title":"How beauty is beating the rest of retail",
-      "url":"http://www.ftchinese.com/interactive/11804?adchannelID=1100&exclusive#adchannelID=1100",
-      "pic":"http://i.ftimg.net/picture/2/000077702_piclink.jpg"
+      "tag":"海外生活",
+      "title":"Foreign postings help us become more self-aware",
+      "url":"http://www.ftchinese.com/interactive/12028?adchannelID=5000&exclusive&ccode=2G186011&type=video#adchannelID=1100",
+      "pic":"http://i.ftimg.net/picture/4/000078214_piclink.jpg"
     },
     {
-      "tag":"中美贸易战",
-      "title":"China hits back at US with retaliatory tariffs",
-      "url":"http://www.ftchinese.com/interactive/11545?adchannelID=1100&exclusive#adchannelID=1100",
-      "pic":"http://i.ftimg.net/picture/9/000076809_piclink.jpg"
+      "tag":"健康",
+      "title":"Death’s understudy: what sleep can teach medicine",
+      "url":"http://www.ftchinese.com/interactive/11925?adchannelID=1100&exclusive#adchannelID=1100",
+      "pic":"http://i.ftimg.net/picture/5/000078215_piclink.jpg"
     },
     {
       "tag":"单曲鉴赏",
-      "title":"The Life of a Song：To Love Somebody",
-      "url":"http://www.ftchinese.com/interactive/11771?adchannelID=1100&exclusive#adchannelID=1100",
+      "title":"The Life of a Song：Hell Hound On My Trail",
+      "url":"http://www.ftchinese.com/interactive/11934?adchannelID=1100&exclusive#adchannelID=1100",
       "pic":"http://i.ftimg.net/picture/9/000077559_piclink.jpg"
     }
   ]

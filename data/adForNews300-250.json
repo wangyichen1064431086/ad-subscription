@@ -2,19 +2,19 @@
   "adTitle":"adForNews300-250",
   "styleName":"adForNews300-250",
 
-  "ccode":"2G180001",
+  "ccode":"2G186010",
   "topTitle":"精选资讯，付费会员专享 &gt; ",
   "headArticle": {
-    "tag":"中国经济",
-    "title":"上海离全球金融中心有多远？",
-    "url":"http://www.ftchinese.com/story/001077518?archive",
-    "pic":"http://i.ftimg.net/picture/1/000074111_piclink.jpg"
+    "tag":"中国股市",
+    "title":"A股停牌问题仍困扰国际投资者",
+    "url":"http://www.ftchinese.com/story/001077926?exclusive",
+    "pic":"http://i.ftimg.net/picture/8/000066228_piclink.jpg"
   },
   "articleList": [
     {
-      "tag":"A股",
-      "title":"A股入指前MSCI警示治理风险",
-      "url":"http://www.ftchinese.com/premium/001077632?exclusive&archive"
+      "tag":"中国市场",
+      "title":"在华外企日益沮丧",
+      "url":"http://www.ftchinese.com/premium/001077859?exclusive&archive"
     }
   ]
 }

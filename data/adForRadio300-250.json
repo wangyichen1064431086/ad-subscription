@@ -2,19 +2,19 @@
   "adTitle":"adForRadio300-250",
   "styleName":"adForRadio300-250",
 
-  "ccode":"2G180001",
-  "topTitle":"英语电台，付费会员专享 &gt; ",
+  "ccode":"2G186011",
+  "topTitle":"英语学习，付费会员专享 &gt; ",
   "headArticle": {
-    "tag":"单曲鉴赏",
-    "title":"The Life of a Song: To Love Somebody",
-    "url":"http://www.ftchinese.com/interactive/11771?adchannelID=1100&exclusive#adchannelID=1100",
-    "pic":"http://i.ftimg.net/picture/9/000077559_piclink.jpg"
+    "tag":"速读测试",
+    "title":"遛狗也要“大众点评”",
+    "url":"http://www.ftchinese.com/interactive/11980?adchannelID=1100",
+    "pic":"http://i.ftimg.net/picture/2/000078212_piclink.jpg"
   },
   "articleList": [
     {
-      "tag":"社会科技",
-      "title":"Let knowledge spread around the world",
-      "url":"http://www.ftchinese.com/interactive/11721?adchannelID=1100&exclusive#adchannelID=1100"
+      "tag":"英语电台",
+      "title":"海外漂泊教会了我们什么",
+      "url":"http://www.ftchinese.com/interactive/12028?adchannelID=5000&exclusive#adchannelID=1100"
     }
   ]
 }

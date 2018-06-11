@@ -26,8 +26,11 @@ env.addFilter('addSearchParam', (str, param) => {
   const hashIndex = str.indexOf('#');
   const hashStr = hashIndex > 0 ? str.substr(hashIndex) : '';
   const strWithOutHashStr = hashIndex > 0 ? str.substring(0, hashIndex) : str;
+  
   if (strWithOutHashStr.includes('?')) {
-    return `${strWithOutHashStr}&${param}${hashStr}`;
+    //去掉原有ccode
+    const strWithOutHashStrWithOutCcode = strWithOutHashStr.replace(/ccode=[a-zA-Z0-9]+&?/,'');
+    return `${strWithOutHashStrWithOutCcode}&${param}${hashStr}`;
   } 
   return `${strWithOutHashStr}?${param}${hashStr}`;
 });
